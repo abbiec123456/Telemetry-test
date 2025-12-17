@@ -1,8 +1,10 @@
+import java.security.MessageDigest;
+
 public class HashUtil {
 
     public static String md5(String input) {
         try {
-            var md = java.security.MessageDigest.getInstance("MD5");
+            MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] digest = md.digest(input.getBytes());
 
             StringBuilder sb = new StringBuilder();
